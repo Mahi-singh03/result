@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">Student Result Portal</h1>
+            <div class="search-container">
+                <input type="number" id="rollNoInput" placeholder="Enter Roll Number" class="search-input">
+                <button id="searchBtn" class="search-btn">Search</button>
+            </div>
+        </div>
+        
+        <div class="result-container" id="resultContainer">
+            <div class="result-card">
+                <div class="student-info">
+                    <div class="student-photo"></div>
+                    <div>
+                        <h2 id="studentName">Student Name</h2>
+                        <p id="fatherName">Father's Name</p>
+                        <p id="rollNo">Roll No: </p>
+                        <p id="Admission no.">Admission no. : </p>
+                    </div>
+                </div>
+                
+                <div class="subject-results">
+                    <table id="resultTable">
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>Theory</th>
+                                <th>CCE</th>
+                                <th>Practical</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultTableBody">
+                            <!-- Results will be inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="summary">
+                    <div class="summary-item">
+                        <span>Total Marks</span>
+                        <span id="totalMarks">0</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Percentage</span>
+                        <span id="percentage">0%</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Division</span>
+                        <span id="division">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="not-found" id="notFound">
+            <div class="not-found-content">
+                <h2>Result Not Found</h2>
+                <p>Please check the roll number and try again.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
